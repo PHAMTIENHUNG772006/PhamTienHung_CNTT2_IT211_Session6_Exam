@@ -55,7 +55,7 @@ public class StudentController {
         return new ResponseEntity<>(new ApiDataResponse<>(
                 true,
                 "Thêm sinh viên thành công",
-                student,
+                studentService.saveStudent(student),
                 HttpStatus.CREATED
         ),HttpStatus.CREATED);
     }
