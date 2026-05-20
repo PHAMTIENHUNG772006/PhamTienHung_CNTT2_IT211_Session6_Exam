@@ -77,7 +77,7 @@ public class StudentController {
         return new ResponseEntity<>(new ApiDataResponse<>(
                 true,
                 "Lấy sinh viên theo ID thành công",
-                true,
+                studentService.deleteStudent(id),
                 HttpStatus.NO_CONTENT
         ),HttpStatus.NO_CONTENT);
     }
